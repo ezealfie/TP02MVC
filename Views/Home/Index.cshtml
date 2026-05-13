@@ -7,11 +7,19 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<form action="" method="GET">
-    <input type="text"Ingrese su nombre.>
-    <input type="DateTime" Ingrese su Fecha de Nacimiento>
-    <input type="radio" Frio o Caliente> 
-    <input type="number" Ingrese su presupuesto en pesos. min = "1" >
-    <input type="number" Ingrese la cantidad de personas que comeran. min="1" max="20"  > 
+<form action="Home" method="GET">
+    <input type="text" name="nombre" placeholder="Ingrese su nombre."> <br>
+    <h6>Ingrese su Fecha de Nacimiento </h6>
+    <input type="date" placeholder=""> <br>
+     <h6>Ingrese el tipo de plato</h6>
+    <ul>
+        <li><input type="radio" name="tipo" value="1" > Caliente</li>
+       <li> <input type="radio" name="tipo" value="2" > Frio</li>
+    </ul>
+    <h6>Ingrese su presupuesto en pesos.</h6>
+    <input type="number" min="1" name="presupuesto"> <br>
+    <h6>Ingrese la cantidad de comensales.</h6>
+    <input type="number" name="cantPersonas" min="1" max="20" step="1" />
+    <input type="submit" Enviar>
     
-    </form>
+</form>
