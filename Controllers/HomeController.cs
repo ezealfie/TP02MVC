@@ -19,6 +19,7 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
     public IActionResult GenerarSugerencia(SugeridorReceta datos)
     {
         ViewBag.plato = datos.DeterminarPlato();
