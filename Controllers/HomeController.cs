@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TP02.Models;
+using TP02MVC.Models;
 
 namespace TP02.Controllers;
 
@@ -18,9 +19,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult GenerarSugerencia(SugeridorReceta datos)
     {
-        return View();
+        ViewBag.plato = datos.DeterminarPlato();
+        ViewBag.dificultad = datos.DeterminarDificultad();
+        ViewBag.tiempo = datos.CalcularTiempo();
+        return View("Resultado");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
