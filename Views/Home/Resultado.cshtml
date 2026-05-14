@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Sugerencia de receta";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+
+<h3>Hola @ViewBag.datos.nombre</h3>
+<h5>Nuestra sugerencia de plato es: @ViewBag.plato</h5>
+<h5>El tiempo aproximado de preparacion es de @ViewBag.tiempo minutos</h5>
+<h5>La cantidad de comensales es de @ViewBag.datos.cantComensales</h5>
+<h5>La dificultad del plato es: @ViewBag.dificultad</h5>

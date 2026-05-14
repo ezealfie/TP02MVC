@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Reflection.PortableExecutable;
 using Microsoft.AspNetCore.Mvc;
 using TP02.Models;
 using TP02MVC.Models;
@@ -25,6 +26,7 @@ public class HomeController : Controller
         ViewBag.plato = datos.DeterminarPlato();
         ViewBag.dificultad = datos.DeterminarDificultad();
         ViewBag.tiempo = datos.CalcularTiempo();
+        ViewBag.datos = datos;
         return View("Resultado");
     }
 

@@ -3,23 +3,22 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bienvenido</h1>
 </div>
 
-<form action="Home" method="GET">
-    <input type="text" name="nombre" placeholder="Ingrese su nombre."> <br>
+<form action='@Url.Action("GenerarSugerencia", "Home")' method="GET">
+    <input type="text" name="nombre" placeholder="Ingrese su nombre." required> <br>
     <h6>Ingrese su Fecha de Nacimiento </h6>
-    <input type="date" placeholder=""> <br>
+    <input type="date" required> <br>
      <h6>Ingrese el tipo de plato</h6>
     <ul>
-        <li><input type="radio" name="tipo" value="1" > Caliente</li>
-       <li> <input type="radio" name="tipo" value="2" > Frio</li>
+        <li><input type="radio" name="tipo" value="1" required> Caliente</li>
+       <li> <input type="radio" name="tipo" value="2" required> Frio</li>
     </ul>
     <h6>Ingrese su presupuesto en pesos.</h6>
-    <input type="number" min="1" name="presupuesto"> <br>
+    <input type="number" min="1" name="presupuesto" required> <br>
     <h6>Ingrese la cantidad de comensales.</h6>
-    <input type="number" name="cantPersonas" min="1" max="20" step="1" />
+    <input type="number" name="cantComensales" min="1" max="20" step="1" required /> <br> <br>
     <input type="submit" Enviar>
     
 </form>
